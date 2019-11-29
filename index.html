@@ -44,23 +44,66 @@
             }
             return a;
         }
-        const body = document.querySelector('#bingo tbody');
-        const possibilities = 
-        ['They hate each other at the beginning','Dead parent','Bitchy ex','Couple has snowball fight','Sassy best friend','Token minority','Christmas miracle','Makeover','Out of league relationship','Career-oriented female lead','Obvious sexism','Break up','Christmas countdown','Holiday decorating/baking montage','Characters fall on top of each other','Remake of classic Christmas song','Precocious tween','Elderly mentor','Fateful soothsayer','Ice skating','Couple drinks hot cocoa','Evil relative/boss','Tragic backstory','Known each other less than a year','Awkward female lead','Knocking things over','Public embarrassment','"Go for it!"','"You go, girl!"','One of the leads has given up on love','"Oh, honey"','Product placement','Too busy for love right now','One of the leads hates the holidays','One of the leads has a big secret','A secret is revealed by someone else','Date that isn\'t a date','One of the leads gets set up','One of the leads is secretly sensitive','Christmas deadline','In love with the best friend all along','Musical holiday person'];
+        const body = document.querySelector(`#bingo tbody`);
+        const possibilities = [
+            `They hate each other at the beginning`,
+            `Dead parent`,
+            `Bitchy ex`,
+            `Couple has snowball fight`,
+            `Sassy best friend`,
+            `Token minority`,
+            `Christmas miracle`,
+            `Makeover`,
+            `Out of league relationship`,
+            `Career-oriented female lead`,
+            `Obvious sexism`,
+            `Break up`,
+            `Christmas countdown`,
+            `Holiday decorating/baking montage`,
+            `Characters fall on top of each other`,
+            `Remake of classic Christmas song`,
+            `Precocious tween`,
+            `Elderly mentor`,
+            `Fateful soothsayer`,
+            `Ice skating`,
+            `Couple drinks hot cocoa`,
+            `Evil relative/boss`,
+            `Tragic backstory`,
+            `Known each other less than a year`,
+            `Awkward female lead`,
+            `Knocking things over`,
+            `Public embarrassment`,
+            `"Go for it!"`,
+            `"You go, girl!"`,
+            `One of the leads has given up on love`,
+            `"Oh, honey"`,
+            `Product placement`,
+            `Too busy for love right now`,
+            `One of the leads hates the holidays`,
+            `One of the leads has a big secret`,
+            `A secret is revealed by someone else`,
+            `Date that isn't a date`,
+            `One of the leads gets set up`,
+            `One of the leads is secretly sensitive`,
+            `Christmas deadline`,
+            `In love with the best friend all along`,
+            `Musical holiday person`,
+            `Technological mishap`
+        ];
         shuffle(possibilities);
-        let html = '';
+        let html = ``;
         possibilities.map((cur, idx) => {
             if (idx <= 24) {
                 if (idx % 5 === 0) {
-                    html += idx === 0 ? '<tr>' : '</tr><tr>';
+                    html += idx === 0 ? `<tr>` : `</tr><tr>`;
                 }
                 if (idx === 12) {
-                    html += '<td style="font-size: 36px;">🌟</td>';
+                    html += `<td style="font-size: 36px;">🌟</td>`;
                 } else {
                     html += `<td>${cur}</td>`;
                 }
                 if (idx === 24) {
-                    html += '</tr>';
+                    html += `</tr>`;
                 }
             }
         });
