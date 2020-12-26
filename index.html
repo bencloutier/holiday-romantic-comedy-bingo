@@ -118,7 +118,11 @@
             });
             body.innerHTML = html;
         }
-        document.getElementById('button').click = makeCard;
+        document.getElementById('button').click = (e) => {
+            e.preventDefault();
+            makeCard();
+        };
+        makeCard();
     </script>
 </body>
 </html>
