@@ -33,7 +33,7 @@
     </style>
 </head>
 <body>
-    <p id="button">Make new bingo card</p>
+    <button id="button">Make new bingo card</button>
     <table id="bingo">
         <thead>
             <tr>
@@ -122,8 +122,10 @@
             });
             body.innerHTML = html;
         }
-        document.getElementById('button').click = makeCard;
-        makeCard();
+        document.getElementById('button').onclick = (e) => {
+            e.preventDefault();
+            makeCard();
+        };
     </script>
 </body>
 </html>
